@@ -14,6 +14,8 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
 
+  config.vm.box_download_insecure = true
+
   config.vm.define "master" do |master|
     master.vm.box = default_box
     master.vm.hostname = "master"
